@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksyon ni Jape</title>
+    <link rel="stylesheet" href="contact1.css">
+	<link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f9f6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container {
+            animation: slideInFromRight 1s ease-out;
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+
+        .info-section {
+            background-color: #e8f8ef;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 300px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info-item span {
+            font-size: 16px;
+            margin-left: 10px;
+            color: #333;
+        }
+
+        .form-section {
+            padding: 30px;
+            background-color: #ffffff;
+            width: 400px;
+        }
+
+        .form-section h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            height: 80px;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #1e88e5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1669ba;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">KNJ</div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="contact.html" style="font-weight: bold; font-size: 1.1em; text-decoration: underline; color: red;">Contact Us</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <!-- Categories Section -->
+    <div id="categories" class="categories">
+        <h1 class="slide-text">Contact Us</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="container">
+            <!-- Info Section -->
+            <div class="info-section">
+                <div class="info-item">
+                    <img src="https://via.placeholder.com/24" alt="Location Icon">
+                    <span>Location</span>
+                </div>
+                <div class="info-item">
+                    <img src="https://via.placeholder.com/24" alt="Phone Icon">
+                    <span>Phone</span>
+                </div>
+                <div class="info-item">
+                    <img src="https://via.placeholder.com/24" alt="Hours Icon">
+                    <span>Hours</span>
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section">
+                <h2>Contact Form</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Comment or Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

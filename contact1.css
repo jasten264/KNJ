@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    position: fixed;
+    top: -100px; /* Initially off-screen */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideDown 0.5s forwards;
+}
+
+/* Keyframes for header slide down */
+@keyframes slideDown {
+    to {
+        top: 0;
+    }
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Categories Section */
+.categories {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Main Container */
+/* Main Container */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    justify-items: center; /* Centers the item horizontally */
+    align-items: center; /* Centers the item vertically */
+    padding: 20px;
+    margin-top: 150px;
+}
+
+/* Category Box */
+.category-box {
+    background-color: #f4f4f4;
+    padding: 40px;
+    width: 90%;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: slideUp 0.5s forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+
+/* Keyframes for category box slide up */
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Category Boxes animation delays */
+.category-box:nth-child(1) {
+    --delay: 0.2s;
+}
+.category-box:nth-child(2) {
+    --delay: 0.4s;
+}
+.category-box:nth-child(3) {
+    --delay: 0.6s;
+}
+.category-box:nth-child(4) {
+    --delay: 0.8s;
+}
+
+/* H1 Slide Animation */
+.slide-text {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.slide-text::before {
+    content: '';
+    display: inline-block;
+    animation: letterSlide 1s forwards;
+}
+
+@keyframes letterSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-text h1 span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: letterSlide 1s forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+/* Split the h1 into individual spans */
+.slide-text h1 {
+    display: flex;
+    gap: 0.1em;
+}
+.contact-form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}

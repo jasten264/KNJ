@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksyon ni Jape</title>
+    <link rel="stylesheet" href="product.css">
+	<link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header class="header">
+    <div class="logo">KNJ</div>
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="product.html" style="font-weight: bold; font-size: 1.1em; text-decoration: underline; color: red;">Products</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About</a>
+        <a href="#" id="cartLink">
+    Cart <span id="cartCount" style="background-color: red; color: white; border-radius: 50%; padding: 2px 8px; font-size: 0.8em; display: none;">0</span>
+</a>
+    </nav>
+</header>
+
+<!-- Cart Box -->
+<!-- Cart Box -->
+<div class="cart-box" id="cartBox">
+    <button class="close-cart-btn" onclick="toggleCart()">X</button>
+    <h2>Your Cart</h2>
+    <p>Your cart is currently empty.</p>
+    <button class="buy-now-btn" id = "shipNow">Ship Now</button>
+</div>
+
+
+
+    <div id="categories" class="categories">
+        <h1>Products</h1>
+    </div>
+
+    <div class="main-container">
+        <div class="category-box" onclick="showProductBox('womenAccessories')">
+            <h2>Women Accessories</h2>
+            <p>Explore our wide range of women’s accessories.</p>
+        </div>
+        <div class="category-box" onclick="showProductBox('menAccessories')">
+            <h2>Men Accessories</h2>
+            <p>Discover stylish accessories for men.</p>
+        </div>
+        <div class="category-box" onclick="showProductBox('womenClothing')">
+            <h2>Women Clothing</h2>
+            <p>Shop the latest trends in women’s clothing.</p>
+        </div>
+        <div class="category-box" onclick="showProductBox('menClothing')">
+            <h2>Men Clothing</h2>
+            <p>Find fashionable clothing for men.</p>
+        </div>
+    </div>
+
+    <div class="product-box" id="womenAccessories">
+    <button class="close-btn" onclick="closeProductBox()">X</button>
+    <h2>Women Accessories</h2>
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="women-accessories.jpg" alt="Product 1" class="product-image">
+            <p class="product-name">Product 1</p>
+            <p class="product-price">$25.00</p>
+             <button class="add-to-cart" data-name="Product 1" data-price="25.00" data-image="women-accessories.jpg">
+        <span>🛒</span> Add to Cart
+    </button>
+        </div>
+        <div class="product-item">
+            <img src="women-accessories.jpg" alt="Product 2" class="product-image">
+            <p class="product-name">Product 2</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart" data-name="Product 2" data-price="30.00" data-image="women-accessories.jpg">
+			<span>🛒</span> Add to Cart
+            </button>
+        </div>
+		<div class="product-item">
+            <img src="women-accessories.jpg" alt="Product 3" class="product-image">
+            <p class="product-name">Product 3</p>
+            <p class="product-price">$25.00</p>
+            <button class="add-to-cart" data-name="Product 3" data-price="25.00" data-image="women-accessories.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="women-accessories.jpg" alt="Product 4" class="product-image">
+            <p class="product-name">Product 4</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart" data-name="Product 4" data-price="30.00" data-image="women-accessories.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <!-- Add more product items as needed -->
+    </div>
+</div>
+
+
+<div class="product-box" id="menAccessories">
+    <button class="close-btn" onclick="closeProductBox()">X</button>
+	<h2>Men Accessories</h2>
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="men-accessories.jpg" alt="Product 1" class="product-image">
+            <p class="product-name">Product 1</p>
+            <p class="product-price">$25.00</p>
+            <button class="add-to-cart" data-name="Product 1" data-price="25.00" data-image="men-accessories.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="men-accessories.jpg" alt="Product 2" class="product-image">
+            <p class="product-name">Product 2</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart" data-name="Product 2" data-price="30.00" data-image="men-accessories.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+		<div class="product-item">
+            <img src="men-accessories.jpg" alt="Product 3" class="product-image">
+            <p class="product-name">Product 3</p>
+            <p class="product-price">$25.00</p>
+            <button class="add-to-cart" data-name="Product 3" data-price="25.00" data-image="men-accessories.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="men-accessories.jpg" alt="Product 4" class="product-image">
+            <p class="product-name">Product 4</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart" data-name="Product 4" data-price="30.00" data-image="men-accessories.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <!-- Add more product items as needed -->
+    </div>
+</div>
+<div class="product-box" id="womenClothing">
+    <button class="close-btn" onclick="closeProductBox()">X</button>
+    <h2>Women Clothing</h2>
+        <div class="product-grid">
+        <div class="product-item">
+            <img src="women-clothing.jpg" alt="Product 1" class="product-image">
+            <p class="product-name">Product 1</p>
+            <p class="product-price">$25.00</p>
+           <button class="add-to-cart" data-name="Product 1" data-price="25.00" data-image="women-clothing.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="women-clothing.jpg" alt="Product 2" class="product-image">
+            <p class="product-name">Product 2</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart" data-name="Product 2" data-price="30.00" data-image="women-clothing.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+		<div class="product-item">
+            <img src="women-clothing.jpg" alt="Product 3" class="product-image">
+            <p class="product-name">Product 3</p>
+            <p class="product-price">$25.00</p>
+            <button class="add-to-cart" data-name="Product 3" data-price="25.00" data-image="women-clothing.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="women-clothing.jpg" alt="Product 4" class="product-image">
+            <p class="product-name">Product 4</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart" data-name="Product 4" data-price="30.00" data-image="women-clothing.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <!-- Add more product items as needed -->
+    </div>
+</div>
+<div class="product-box" id="menClothing">
+    <button class="close-btn" onclick="closeProductBox()">X</button>
+    <h2>Men Clothing</h2>
+           <div class="product-grid">
+        <div class="product-item">
+            <img src="men-clothing.jpg" alt="Product 1" class="product-image">
+            <p class="product-name">Product 1</p>
+            <p class="product-price">$25.00</p>
+            <button class="add-to-cart" data-name="Product 1" data-price="25.00" data-image="men-clothing.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="men-clothing.jpg" alt="Product 2" class="product-image">
+            <p class="product-name">Product 2</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart" data-name="Product 2" data-price="30.00" data-image="men-clothing.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+		<div class="product-item">
+            <img src="men-clothing.jpg" alt="Product 3" class="product-image">
+            <p class="product-name">Product 3</p>
+            <p class="product-price">$25.00</p>
+            <button class="add-to-cart" data-name="Product 3" data-price="25.00" data-image="men-clothing.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <div class="product-item">
+            <img src="men-clothing.jpg" alt="Product 4" class="product-image">
+            <p class="product-name">Product 4</p>
+            <p class="product-price">$30.00</p>
+            <button class="add-to-cart" data-name="Product 4" data-price="30.00" data-image="men-clothing.jpg">
+                <span>🛒</span> Add to Cart
+            </button>
+        </div>
+        <!-- Add more product items as needed -->
+    </div>
+</div>
+
+
+
+    <script src="product1.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaf2ed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            color: #57c28a;
+        }
+
+        .title-section {
+            text-align: left;
+            margin: 50px 0;
+        }
+
+        .title-section h1 {
+            font-size: 48px;
+            color: #000;
+        }
+
+        .title-section p {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h2 style="color: #57c28a;">foundr</h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#">Solutions</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <section class="title-section">
+            <h1>About Us</h1>
+            <p>Hello, We&#39;re Foundr. A multi-team app agency building scalable solutions.</p>
+        </section>
+
+        <section class="image-section">
+            <img src="https://via.placeholder.com/800x400" alt="Team Image">
+        </section>
+    </div>
+</body>
+</html>
